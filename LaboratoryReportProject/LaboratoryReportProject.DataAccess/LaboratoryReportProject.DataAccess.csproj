@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8019D238-E353-4EE0-8117-682647417A8A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LaboratoryReportProject.DataAccess</RootNamespace>
+    <AssemblyName>LaboratoryReportProject.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstracts\IDiagnosisDal.cs" />
+    <Compile Include="Abstracts\IEntityDal.cs" />
+    <Compile Include="Abstracts\IRoleDal.cs" />
+    <Compile Include="Concretes\AdonetDiagnosisDal.cs" />
+    <Compile Include="Concretes\AdonetLaborantDal.cs" />
+    <Compile Include="Abstracts\ILaborantDal.cs" />
+    <Compile Include="Abstracts\IPatientDal.cs" />
+    <Compile Include="Abstracts\IReportDal.cs" />
+    <Compile Include="Concretes\AdonetReportDal.cs" />
+    <Compile Include="Concretes\AdonetRoleDal.cs" />
+    <Compile Include="Database.cs" />
+    <Compile Include="Concretes\AdonetPatientDal.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Ninject">
+      <Version>3.3.6</Version>
+    </PackageReference>
+    <PackageReference Include="System.Configuration.ConfigurationManager">
+      <Version>6.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="System.Data.SqlClient">
+      <Version>4.8.3</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LaboratoryReportProject.Core\LaboratoryReportProject.Core.csproj">
+      <Project>{4366943E-E25C-452A-8FB3-BC291173EEB1}</Project>
+      <Name>LaboratoryReportProject.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LaboratoryReportProject.Entities\LaboratoryReportProject.Entities.csproj">
+      <Project>{FBDA6946-4DAE-4DEA-943A-46358C2557D5}</Project>
+      <Name>LaboratoryReportProject.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

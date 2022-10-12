@@ -1,0 +1,207 @@
+﻿<Window x:Class="LaboratoryReportProject.WPf.UI.HomeScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LaboratoryReportProject.WPf.UI"
+        mc:Ignorable="d"
+        Title="Home" Height="800" Width="1000" FontSize="14" Background="Transparent"
+        AllowsTransparency="True"
+        Loaded="Window_Loaded"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        MouseDown="Window_MouseDown">
+    <Border CornerRadius="20" 
+          
+            BorderThickness="5">
+        <Border.BorderBrush>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#133928" Offset="0"></GradientStop>
+                <GradientStop Color="#70BB99" Offset="0.75"></GradientStop>
+
+                <GradientStop Color="#50665C" Offset="1"></GradientStop>
+            </LinearGradientBrush>
+
+        </Border.BorderBrush>
+        <Border.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#2E885F" Offset="0"></GradientStop>
+                <GradientStop Color="#70BB99" Offset="0."></GradientStop>
+
+                <GradientStop Color="#50665C" Offset="1"></GradientStop>
+            </LinearGradientBrush>
+        </Border.Background>
+
+        <Grid>
+            <Grid>
+                <Button Margin="896,0,0,708"
+                        
+                        Name="buttonClose" Background="#545d6b" Foreground="DarkRed" Content="X"
+                        FontFamily="Montserrat" Click="buttonClose_Click" BorderBrush="DarkRed" BorderThickness="1" FontSize="12" Height="40" Width="40">
+                  
+
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="20"></Setter>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
+
+
+
+                <Button Margin="864,0,59,708"
+                        
+                        Name="buttonMinimize" Background="#545d6b" Foreground="Red" Content="-"
+                        FontFamily="Montserrat" Width="40" Height="40" Click="buttonMinimize_Click" BorderThickness="1" BorderBrush="DarkRed" FontSize="20"
+                      Grid.Column="2">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="20"></Setter>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
+                <Button Content="Add Patient"  BorderBrush="DarkRed" BorderThickness="1"  x:Name="addPatientButton" Background="#545d6b" Foreground="White" Click="addPatientButton_Click" Margin="43,41,781,708">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="12"></Setter>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Content="Add Laborant"  BorderBrush="DarkRed" BorderThickness="1"  x:Name="addLaborantButton" Background="#545d6b" Foreground="White" Click="addLaborantButton_Click" Margin="228,41,607,708">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="12"></Setter>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
+            </Grid>
+            <Grid Margin="0,0,0,575">
+                <Button  
+                        Name="buttonRefreshPatients" Background="#545d6b" Foreground="Red"
+                        FontFamily="Montserrat" Click="buttonRefreshPatients_Click" BorderThickness="0" FontSize="12" Margin="369,87,515,51" RenderTransformOrigin="0.5,0.5">
+                    <Button.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleY="0.803"/>
+                            <RotateTransform/>
+                            <TranslateTransform Y="3.422"/>
+                        </TransformGroup>
+                    </Button.RenderTransform>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="40" Height="40" CornerRadius="20" Background="{TemplateBinding Background}">
+                                <ContentPresenter  VerticalAlignment="Center" HorizontalAlignment="Center"></ContentPresenter>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <Image Source="\Icons\icons8-refresh-48.png" Width="25" Height="25" ></Image>
+                </Button>
+            </Grid>
+            <Grid Margin="833,56,132,648">
+                <Button 
+                        
+                        Name="buttonRefreshReports" Background="#545d6b" Foreground="Red" 
+                        FontFamily="Montserrat" Click="buttonRefreshReports_Click" BorderThickness="0" FontSize="12" Margin="0,43,-66,0"  >
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border  Width="40" Height="40" CornerRadius="20" Background="{TemplateBinding Background}" Margin="10,0,9,-9">
+                                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"></ContentPresenter>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <Image Source="\Icons\icons8-refresh-48.png"  Width="25" Height="25" ></Image>
+
+                </Button>
+            </Grid>
+            <Button Content="Reports"  x:Name="reportsButton" BorderBrush="DarkRed" BorderThickness="1" Background="#545d6b" Foreground="White" Margin="475,108,162,648" Click="getReportsButton_Click" RenderTransformOrigin="-2.998,1.839">
+
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="12"></Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button Content="Patients"  x:Name="patientsButton"  BorderBrush="DarkRed" BorderThickness="1"  Background="#545d6b" Foreground="White" Margin="43,108,606,648" RenderTransformOrigin="0.5,0.5" Click="getPatientsButtonClick">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="12"></Setter>
+                    </Style>
+                </Button.Resources>
+
+            </Button>
+            <TextBox Margin="43,147,700,607" Name="searchPatientTbx" BorderBrush="DarkRed" BorderThickness="1"  TextChanged="searchPatientTbx_TextChanged" >
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="12"></Setter>
+                    </Style>
+                </TextBox.Resources> 
+            </TextBox>
+            <Button Content="Search"  x:Name="searchPatientButton"  BorderBrush="DarkRed" BorderThickness="1"  Background="#545d6b" Foreground="White" Margin="295,147,606,607" RenderTransformOrigin="0.562,2.224" Click="searchButton_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="12"></Setter>
+                    </Style>
+                </Button.Resources>
+
+            </Button>
+            <TextBox Margin="475,147,261,607" Name="searchReportTbx"  BorderBrush="DarkRed" BorderThickness="1"  TextChanged="searchReportTbx_TextChanged" >
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="12"></Setter>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+            <Button Content="Search"  BorderBrush="DarkRed" BorderThickness="1"  x:Name="searchReportButton" Background="#545d6b" Foreground="White" Margin="734,147,162,607" RenderTransformOrigin="0.562,2.224" Click="searchReportButton_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="12"></Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <StackPanel Margin="0,-33,0,0" >
+
+
+            </StackPanel>
+
+
+            <Grid Margin="0,215,0,0" >
+                <DataGrid IsReadOnly="true" Height="473" BorderBrush="DarkRed" BorderThickness="1"  HorizontalAlignment="Left" Margin="34,39,0,0" Name="patientsdgw" VerticalAlignment="Top" Width="408" Background="Gray" MouseDoubleClick="patientsdgw_MouseDoubleClick" ItemsSource="{Binding}">
+                    <DataGrid.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="12"></Setter>
+                        </Style>
+                    </DataGrid.Resources>
+                    
+                </DataGrid>
+                <DataGrid IsReadOnly="true" Height="473"  BorderBrush="DarkRed" BorderThickness="1"  HorizontalAlignment="Left" Margin="475,39,0,0" x:Name="reportsdgw" VerticalAlignment="Top" Width="435" Background="Gray" MouseDoubleClick="patientsdgw_MouseDoubleClick" ItemsSource="{Binding}">
+                    <DataGrid.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="12"></Setter>
+                        </Style>
+                    </DataGrid.Resources>
+                </DataGrid>
+            </Grid>
+            <Button Margin="734,737,78,10"
+                        
+                        Name="logoutButton" Background="#545d6b"
+                        FontFamily="Montserrat" Click="logoutButton_Click" BorderThickness="1" BorderBrush="DarkRed"  Foreground="white" Content="Logout" FontSize="12">
+             
+
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="12"></Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+        </Grid>
+
+
+
+    </Border>
+
+
+</Window>

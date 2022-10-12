@@ -1,0 +1,6 @@
+C:\Users\Win10\source\repos\LaboratoryReportProject\LaboratoryReportProject.Entities\bin\Release\LaboratoryReportProject.Entities.dll
+C:\Users\Win10\source\repos\LaboratoryReportProject\LaboratoryReportProject.Entities\bin\Release\LaboratoryReportProject.Entities.pdb
+C:\Users\Win10\source\repos\LaboratoryReportProject\LaboratoryReportProject.Entities\obj\Release\LaboratoryReportProject.Entities.csproj.AssemblyReference.cache
+C:\Users\Win10\source\repos\LaboratoryReportProject\LaboratoryReportProject.Entities\obj\Release\LaboratoryReportProject.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Win10\source\repos\LaboratoryReportProject\LaboratoryReportProject.Entities\obj\Release\LaboratoryReportProject.Entities.dll
+C:\Users\Win10\source\repos\LaboratoryReportProject\LaboratoryReportProject.Entities\obj\Release\LaboratoryReportProject.Entities.pdb

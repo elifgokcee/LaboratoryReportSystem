@@ -1,0 +1,99 @@
+﻿<Window x:Class="LaboratoryReportProject.WPf.UI.ReportsOfPatientScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LaboratoryReportProject.WPf.UI"
+        mc:Ignorable="d"
+        Title="ReportsOfPatientScreen"  Height="600" Width="800" FontSize="14" Background="Transparent"
+           AllowsTransparency="True"
+        ResizeMode="NoResize" Loaded="Window_Loaded"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        MouseDown="Window_MouseDown"
+       >
+    <Border  CornerRadius="20" 
+          
+            BorderThickness="5">
+        <Border.BorderBrush>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#133928" Offset="0"></GradientStop>
+                <GradientStop Color="#70BB99" Offset="0.75"></GradientStop>
+
+                <GradientStop Color="#50665C" Offset="1"></GradientStop>
+            </LinearGradientBrush>
+
+        </Border.BorderBrush>
+        <Border.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#2E885F" Offset="0"></GradientStop>
+                <GradientStop Color="#70BB99" Offset="0."></GradientStop>
+
+                <GradientStop Color="#50665C" Offset="1"></GradientStop>
+            </LinearGradientBrush>
+        </Border.Background>
+
+        <Grid>
+            <Grid>
+                <Button Margin="709,0,-10,544" 
+                        
+                        Name="buttonClose" Background="#545d6b" Foreground="DarkRed" Content="X"
+                        FontFamily="Montserrat" Click="buttonClose_Click" BorderBrush="DarkRed" BorderThickness="1" Height="30"
+                        Width="30" FontSize="12">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="15"></Setter>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
+
+
+
+                <Button 
+                        
+                        Name="buttonMinimize" Background="#545d6b" BorderBrush="DarkRed" BorderThickness="1" Foreground="DarkRed" Content="-"
+                        FontFamily="Montserrat" Click="buttonMinimize_Click" Width="30" Height="30" FontSize="20" Margin="646,0,10,544">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="15" ></Setter>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </Grid>
+            <StackPanel Margin="20">
+                <Label Content="Reports of Patient" Foreground="White"  HorizontalAlignment="Center" FontSize="25"></Label>
+                <Separator Background="DarkRed"></Separator>
+
+
+
+
+            </StackPanel>
+          
+            <Grid Margin="0,188,0,0" >
+                <Button Margin="583,-73,41,434" Content="Delete Report" BorderBrush="DarkRed" BorderThickness="1" Foreground="White" Background="#545d6b" Click="deleteButton_Click">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="15"></Setter>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Margin="583,-16,41,375" BorderBrush="DarkRed" BorderThickness="1" Content="Update Report" Foreground="White" Background="#545d6b" Click="updateButton_Click">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="15"></Setter>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <DataGrid IsReadOnly="true" Height="430" HorizontalAlignment="Left" BorderBrush="DarkRed" BorderThickness="1" Margin="76,-94,0,0" x:Name="reportsOfPatientdgw" 
+                          VerticalAlignment="Top" Width="463" Background="Gray"  ItemsSource="{Binding}"  >
+                    <DataGrid.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="12"></Setter> 
+                        </Style>
+                    </DataGrid.Resources>
+                </DataGrid>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

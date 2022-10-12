@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="AddLaborantScreen.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddPatientScreen.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddReportScreen.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="HomeScreen.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="LoginScreen.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PatientsDetailsScreen.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ReportsOfPatientScreen.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UpdateReportScreen.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="AddLaborantScreen.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddPatientScreen.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddReportScreen.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="HomeScreen.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="LoginScreen.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PatientsDetailsScreen.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ReportsOfPatientScreen.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UpdateReportScreen.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

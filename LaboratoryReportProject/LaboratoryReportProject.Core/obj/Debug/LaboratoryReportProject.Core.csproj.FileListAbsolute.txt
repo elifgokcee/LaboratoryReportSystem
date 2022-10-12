@@ -1,0 +1,9 @@
+C:\Users\Win10\source\repos\LaboratoryReportProject\LaboratoryReportProject.Core\bin\Debug\LaboratoryReportProject.Core.dll
+C:\Users\Win10\source\repos\LaboratoryReportProject\LaboratoryReportProject.Core\bin\Debug\LaboratoryReportProject.Core.pdb
+C:\Users\Win10\source\repos\LaboratoryReportProject\LaboratoryReportProject.Core\bin\Debug\LaboratoryReportProject.Entities.dll
+C:\Users\Win10\source\repos\LaboratoryReportProject\LaboratoryReportProject.Core\bin\Debug\LaboratoryReportProject.Entities.pdb
+C:\Users\Win10\source\repos\LaboratoryReportProject\LaboratoryReportProject.Core\obj\Debug\LaboratoryReportProject.Core.csproj.AssemblyReference.cache
+C:\Users\Win10\source\repos\LaboratoryReportProject\LaboratoryReportProject.Core\obj\Debug\LaboratoryReportProject.Core.csproj.CoreCompileInputs.cache
+C:\Users\Win10\source\repos\LaboratoryReportProject\LaboratoryReportProject.Core\obj\Debug\LaboratoryReportProject.Core.csproj.CopyComplete
+C:\Users\Win10\source\repos\LaboratoryReportProject\LaboratoryReportProject.Core\obj\Debug\LaboratoryReportProject.Core.dll
+C:\Users\Win10\source\repos\LaboratoryReportProject\LaboratoryReportProject.Core\obj\Debug\LaboratoryReportProject.Core.pdb
